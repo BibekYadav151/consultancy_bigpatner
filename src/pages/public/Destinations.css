@@ -1,5 +1,5 @@
 .destinations-page {
-  background: var(--bg-dark);
+  background: var(--bg-main);
 }
 
 .destinations-page .page-hero {
@@ -11,7 +11,7 @@
   background-position: center;
   display: flex;
   align-items: center;
-  color: var(--white);
+  color: var(--text-white);
 }
 
 .destinations-page .page-hero::before {
@@ -21,7 +21,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(31, 41, 55, 0.7);
 }
 
 .destinations-page .page-hero .container {
@@ -42,9 +42,9 @@
   width: 100%;
   padding: 1.2rem 1.5rem;
   border-radius: 8px;
-  background: var(--bg-charcoal);
-  border: 1px solid var(--secondary-color);
-  color: var(--white);
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
   font-size: 1.1rem;
 }
 
@@ -60,18 +60,20 @@
 }
 
 .destinations-page .country-card {
-  background: var(--bg-charcoal);
+  background: var(--bg-white);
   border-radius: 12px;
   overflow: hidden;
   text-decoration: none;
-  color: var(--white);
-  border: 1px solid var(--secondary-color);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
+  box-shadow: var(--shadow);
 }
 
 .destinations-page .country-card:hover {
   transform: translateY(-10px);
   border-color: var(--primary-color);
+  box-shadow: var(--shadow-lg);
 }
 
 .destinations-page .country-card img {
@@ -91,7 +93,7 @@
 }
 
 .destinations-page .card-content p {
-  color: var(--text-light);
+  color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -105,7 +107,7 @@
 
 /* Country Detail */
 .country-detail-page {
-  background: var(--bg-dark);
+  background: var(--bg-main);
 }
 
 .country-hero {
@@ -116,7 +118,7 @@
   background-position: center;
   display: flex;
   align-items: center;
-  color: var(--white);
+  color: var(--text-white);
 }
 
 .country-hero::before {
@@ -126,7 +128,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(31, 41, 55, 0.6);
 }
 
 .country-hero h1 {
@@ -155,7 +157,7 @@
 }
 
 .content-section p {
-  color: var(--text-light);
+  color: var(--text-secondary);
   line-height: 1.8;
   font-size: 1.1rem;
 }
@@ -167,10 +169,11 @@
 }
 
 .university-item {
-  background: var(--bg-charcoal);
+  background: var(--bg-white);
   padding: 2rem;
   border-radius: 8px;
   border-left: 4px solid var(--primary-color);
+  box-shadow: var(--shadow);
 }
 
 .university-item h3 {

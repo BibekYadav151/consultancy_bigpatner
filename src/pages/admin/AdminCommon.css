@@ -5,22 +5,22 @@
   gap: 1rem;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .admin-page-header h1 {
   margin: 0;
-  color: var(--white);
+  color: var(--text-primary);
   font-size: 2rem;
 }
 
 .admin-card {
-  background: var(--bg-charcoal);
+  background: var(--bg-white);
   border-radius: 12px;
   box-shadow: var(--shadow);
   padding: 2rem;
   margin-bottom: 2rem;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--border-color);
 }
 
 .admin-toolbar {
@@ -33,10 +33,10 @@
 .admin-toolbar input,
 .admin-toolbar select {
   padding: 0.8rem 1rem;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  background: var(--bg-dark);
-  color: var(--white);
+  background: var(--bg-white);
+  color: var(--text-primary);
   min-width: 250px;
 }
 
@@ -59,12 +59,12 @@
 .admin-table td {
   padding: 1.2rem 1rem;
   text-align: left;
-  border-bottom: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--border-color);
   vertical-align: middle;
 }
 
 .admin-table th {
-  background: var(--bg-dark);
+  background: var(--bg-light);
   font-weight: 700;
   color: var(--primary-color);
   text-transform: uppercase;
@@ -73,7 +73,7 @@
 }
 
 .admin-table td {
-  color: var(--text-light);
+  color: var(--text-primary);
 }
 
 .admin-actions {
@@ -96,7 +96,7 @@
 
 .admin-form label {
   font-weight: 600;
-  color: var(--white);
+  color: var(--text-primary);
   font-size: 0.95rem;
 }
 
@@ -104,10 +104,10 @@
 .admin-form select,
 .admin-form textarea {
   padding: 1rem;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  background: var(--bg-dark);
-  color: var(--white);
+  background: var(--bg-white);
+  color: var(--text-primary);
   font-size: 1rem;
 }
 
@@ -133,7 +133,7 @@
   gap: 1rem;
   margin-top: 1rem;
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: var(--text-secondary);
 }
 
 .admin-image-preview img {
@@ -141,7 +141,7 @@
   height: 40px;
   object-fit: cover;
   border-radius: 6px;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--border-color);
 }
 
 @media (max-width: 900px) {
