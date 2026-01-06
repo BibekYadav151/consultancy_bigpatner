@@ -4,144 +4,171 @@
 }
 
 .admin-sidebar {
-  width: 260px;
-  background: #2d3748;
-  color: white;
+  width: 280px;
+  background: var(--bg-dark);
+  color: var(--white);
   position: fixed;
   height: 100vh;
   overflow-y: auto;
+  border-right: 1px solid var(--secondary-color);
 }
 
 .sidebar-header {
-  padding: 2rem 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 2rem;
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 .sidebar-header h2 {
-  margin: 0 0 0.5rem;
+  margin: 0;
   font-size: 1.5rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .sidebar-header p {
-  margin: 0;
-  opacity: 0.8;
-  font-size: 0.875rem;
+  margin: 0.5rem 0 0;
+  opacity: 0.7;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .sidebar-nav {
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
 .nav-section {
-  padding: 1rem 1.5rem 0.5rem;
-  font-size: 0.75rem;
+  padding: 1.5rem 2rem 0.75rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  opacity: 0.6;
-  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+  opacity: 0.8;
+  font-weight: 700;
 }
 
 .nav-item {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem 1.5rem;
-  color: white;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  color: var(--text-light);
   text-decoration: none;
-  transition: background 0.2s ease;
+  transition: all 0.3s ease;
   border: none;
   background: none;
   width: 100%;
   text-align: left;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-left: 3px solid transparent;
 }
 
 .nav-item:hover,
 .nav-item.active {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-charcoal);
+  color: var(--primary-color);
+  border-left-color: var(--primary-color);
 }
 
 .logout-btn {
-  margin-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--secondary-color);
+  padding-top: 2rem;
 }
 
 .admin-content {
   flex: 1;
-  margin-left: 260px;
-  padding: 2rem;
-  background: #f7fafc;
+  margin-left: 280px;
+  padding: 3rem;
+  background: var(--bg-dark);
   min-height: 100vh;
+  color: var(--white);
 }
 
 .admin-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 .admin-header h1 {
   margin: 0;
-  color: #2d3748;
+  color: var(--white);
+  font-size: 2.5rem;
 }
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
 }
 
 .stat-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: var(--bg-charcoal);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
+  border: 1px solid var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
 }
 
 .stat-icon {
-  font-size: 2.5rem;
-  color: #667eea;
+  font-size: 3rem;
+  color: var(--primary-color);
 }
 
 .stat-card h3 {
   margin: 0;
-  font-size: 2rem;
-  color: #2d3748;
+  font-size: 2.5rem;
+  color: var(--white);
 }
 
 .stat-card p {
   margin: 0.25rem 0 0;
-  color: #718096;
-  font-size: 0.875rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .badge {
   display: inline-block;
-  background: #667eea;
-  color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  margin-top: 0.25rem;
+  background: var(--primary-color);
+  color: var(--bg-dark);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
 }
 
 .recent-enquiries {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: var(--bg-charcoal);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--secondary-color);
 }
 
 .recent-enquiries h2 {
-  margin: 0 0 1.5rem;
-  color: #2d3748;
+  margin: 0 0 2rem;
+  color: var(--white);
+  font-size: 1.75rem;
 }
 
 .enquiries-table {
@@ -156,55 +183,53 @@
 
 .enquiries-table th,
 .enquiries-table td {
-  padding: 0.75rem;
+  padding: 1.2rem 1rem;
   text-align: left;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 .enquiries-table th {
-  background: #f7fafc;
-  font-weight: 600;
-  color: #2d3748;
+  background: var(--bg-dark);
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: 0.8rem;
 }
 
 .enquiries-table td {
-  color: #4a5568;
+  color: var(--text-light);
 }
 
 .status-badge {
   display: inline-block;
-  padding: 0.25rem 0.75rem;
-  border-radius: 12px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
   font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: capitalize;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .status-badge.new {
-  background: #fef3c7;
-  color: #92400e;
+  background: var(--primary-color);
+  color: var(--bg-dark);
 }
 
 .status-badge.in_progress {
-  background: #dbeafe;
-  color: #1e40af;
+  background: #3182ce;
+  color: white;
 }
 
-.status-badge.contacted {
-  background: #d1fae5;
-  color: #065f46;
-}
-
+.status-badge.contacted,
 .status-badge.active,
 .status-badge.published {
-  background: #d1fae5;
-  color: #065f46;
+  background: #38a169;
+  color: white;
 }
 
 .status-badge.inactive,
 .status-badge.draft {
-  background: #e5e7eb;
-  color: #374151;
+  background: #718096;
+  color: white;
 }
 
 .admin-loading {
@@ -213,16 +238,17 @@
   justify-content: center;
   min-height: 100vh;
   font-size: 1.5rem;
-  color: #718096;
+  color: var(--text-light);
+  background: var(--bg-dark);
 }
 
 @media (max-width: 968px) {
   .admin-sidebar {
-    width: 200px;
+    width: 240px;
   }
 
   .admin-content {
-    margin-left: 200px;
+    margin-left: 240px;
   }
 }
 
@@ -233,6 +259,7 @@
 
   .admin-content {
     margin-left: 0;
+    padding: 1.5rem;
   }
 
   .stats-grid {

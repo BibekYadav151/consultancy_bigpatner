@@ -26,7 +26,7 @@ const AdminLayout = () => {
     <div className="admin-dashboard">
       <aside className="admin-sidebar">
         <div className="sidebar-header">
-          <h2>Admin Panel</h2>
+          <h2>BIG Dashboard</h2>
           <p>{user?.name}</p>
         </div>
         <nav className="sidebar-nav">

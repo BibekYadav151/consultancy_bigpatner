@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>{settings.site_name || 'Big Partner Consultancy'}</h3>
+            <h3>{settings.site_name || 'BIG Partnership'}</h3>
             <p>Your trusted partner for international education opportunities.</p>
             <div className="social-links">
               {settings.facebook_url && <a href={settings.facebook_url} target="_blank" rel="noopener noreferrer"><FaFacebook /></a>}
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} {settings.site_name || 'Big Partner Consultancy'}. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {settings.site_name || 'BIG Partnership'}. All rights reserved.</p>
         </div>
       </div>
     </footer>

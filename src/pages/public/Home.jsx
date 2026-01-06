@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaGraduationCap, FaPassport, FaUserTie, FaPhone, FaWhatsapp } from 'react-icons/fa';
+import { FaGraduationCap, FaPassport, FaUserTie, FaPhone, FaWhatsapp, FaQuoteLeft, FaGlobe, FaCheckCircle } from 'react-icons/fa';
 import { BACKEND_URL, countriesAPI, universitiesAPI, blogsAPI, settingsAPI } from '../../services/api';
 import './Home.css';
 
@@ -12,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     countriesAPI.getAll({ status: 'active' })
-      .then(response => setCountries(response.data.slice(0, 6)))
+      .then(response => setCountries(response.data.slice(0, 5)))
       .catch(error => console.error('Failed to fetch countries:', error));
 
     universitiesAPI.getAll({ status: 'active' })
@@ -33,160 +33,168 @@ const Home = () => {
   return (
     <div className="home">
       <section className="hero">
-        <div className="hero-content">
-          <h1 className="hero-title">
-            Your Gateway to
-            <span className="highlight"> Global Education</span>
-          </h1>
-          <p className="hero-subtitle">
-            Expert guidance for studying abroad. We help you achieve your dreams
-            of international education with personalized counseling and support.
-          </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">Apply Now</Link>
-            <Link to="/contact" className="btn btn-secondary">Free Consultation</Link>
+        <div className="hero-overlay"></div>
+        <div className="container">
+          <div className="hero-content">
+            <h1 className="hero-title">
+              Your Global Pathway to <br />
+              <span>World-Class Education</span>
+            </h1>
+            <p className="hero-subtitle">
+              Partnering students with top international universities for a successful future. 
+              We provide expert guidance for your study abroad journey.
+            </p>
+            <div className="hero-buttons">
+              <Link to="/contact" className="btn btn-primary">Apply Now</Link>
+              <Link to="/contact" className="btn btn-secondary">Free Consultation</Link>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="featured-destinations">
         <div className="container">
-          <div className="section-header">
-            <h2>Top Study Destinations</h2>
-            <p>Explore the most popular countries for international students</p>
+          <div className="section-title">
+            <h2>Featured Destinations</h2>
+            <p>Explore top countries to pursue your international education</p>
           </div>
           <div className="countries-grid">
             {countries.map(country => (
               <Link to={`/destinations/${country.slug}`} key={country.id} className="country-card">
-                {country.flag_image && (
-                  <img src={`${BACKEND_URL}/uploads/countries/${country.flag_image}`} alt={country.name} />
-                )}
-                <h3>{country.name}</h3>
-                <p>{country.short_description}</p>
+                <div className="country-image">
+                  {country.flag_image && (
+                    <img src={`${BACKEND_URL}/uploads/countries/${country.flag_image}`} alt={country.name} />
+                  )}
+                  <div className="country-overlay">
+                    <h3>{country.name}</h3>
+                    <span>View Universities</span>
+                  </div>
+                </div>
               </Link>
             ))}
           </div>
-          <div className="text-center">
-            <Link to="/destinations" className="btn btn-outline">View All Destinations</Link>
+        </div>
+      </section>
+
+      <section className="why-big">
+        <div className="container">
+          <div className="why-big-grid">
+            <div className="why-big-image">
+               <img src="https://images.unsplash.com/photo-1523050853064-80357588702e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Education" />
+            </div>
+            <div className="why-big-content">
+              <div className="section-title" style={{ textAlign: 'left' }}>
+                <h2>Why BIG Partnership</h2>
+                <p>We are dedicated to guiding students toward globally recognized universities with transparency and excellence.</p>
+              </div>
+              <div className="benefits-list">
+                <div className="benefit-item">
+                  <FaCheckCircle className="benefit-icon" />
+                  <div>
+                    <h4>Expert Counselors</h4>
+                    <p>Professional guidance from experienced education consultants.</p>
+                  </div>
+                </div>
+                <div className="benefit-item">
+                  <FaCheckCircle className="benefit-icon" />
+                  <div>
+                    <h4>Global University Network</h4>
+                    <p>Direct partnerships with top-tier universities worldwide.</p>
+                  </div>
+                </div>
+                <div className="benefit-item">
+                  <FaCheckCircle className="benefit-icon" />
+                  <div>
+                    <h4>End-to-End Support</h4>
+                    <p>From university selection to visa approval and beyond.</p>
+                  </div>
+                </div>
+                <div className="benefit-item">
+                  <FaCheckCircle className="benefit-icon" />
+                  <div>
+                    <h4>High Visa Success Rate</h4>
+                    <p>Expert assistance with documentation and interview preparation.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="popular-universities">
         <div className="container">
-          <div className="section-header">
+          <div className="section-title">
             <h2>Popular Universities</h2>
             <p>Top institutions partnered with us</p>
           </div>
-          <div className="universities-slider">
+          <div className="universities-grid">
             {universities.map(university => (
-              <div key={university.id} className="university-card">
-                {university.logo && (
-                  <img src={`${BACKEND_URL}/uploads/universities/${university.logo}`} alt={university.name} />
-                )}
+              <div key={university.id} className="uni-card">
+                <div className="uni-logo">
+                  {university.logo ? (
+                    <img src={`${BACKEND_URL}/uploads/universities/${university.logo}`} alt={university.name} />
+                  ) : (
+                    <FaGlobe />
+                  )}
+                </div>
                 <h4>{university.name}</h4>
                 <p>{university.location}</p>
+                <Link to="/universities" className="uni-link">Apply Now</Link>
               </div>
             ))}
-          </div>
-          <div className="text-center">
-            <Link to="/universities" className="btn btn-outline">View All Universities</Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="services">
-        <div className="container">
-          <div className="section-header">
-            <h2>Our Services</h2>
-            <p>Comprehensive support for your study abroad journey</p>
-          </div>
-          <div className="services-grid">
-            <div className="service-card">
-              <div className="service-icon"><FaPassport /></div>
-              <h3>Visa Guidance</h3>
-              <p>Complete assistance with visa applications and documentation</p>
-            </div>
-            <div className="service-card">
-              <div className="service-icon"><FaGraduationCap /></div>
-              <h3>University Admissions</h3>
-              <p>Help you get admitted to top universities worldwide</p>
-            </div>
-            <div className="service-card">
-              <div className="service-icon"><FaUserTie /></div>
-              <h3>Career Counseling</h3>
-              <p>Professional guidance for choosing the right course and career path</p>
-            </div>
           </div>
         </div>
       </section>
 
       <section className="testimonials">
         <div className="container">
-          <div className="section-header">
-            <h2>Success Stories</h2>
-            <p>What our students say about us</p>
+          <div className="section-title">
+            <h2>Student Testimonials</h2>
+            <p>What our students say about their journey with us</p>
           </div>
           <div className="testimonials-grid">
             <div className="testimonial-card">
-              <p>"Big Partner Consultancy helped me get admission to my dream university in the UK. Their guidance was invaluable!"</p>
-              <h4>Sarah Johnson</h4>
-              <span>Now studying in University of Oxford</span>
+              <FaQuoteLeft className="quote-icon" />
+              <p>"BIG Partnership helped me get admission to my dream university in the UK. Their guidance was invaluable throughout the process!"</p>
+              <div className="testimonial-author">
+                <h4>Sarah Johnson</h4>
+                <span>Oxford University, UK</span>
+              </div>
             </div>
             <div className="testimonial-card">
+              <FaQuoteLeft className="quote-icon" />
               <p>"The visa process was so smooth thanks to their expert team. Highly recommended for anyone planning to study abroad."</p>
-              <h4>Michael Chen</h4>
-              <span>Now studying in University of Toronto</span>
+              <div className="testimonial-author">
+                <h4>Michael Chen</h4>
+                <span>University of Toronto, Canada</span>
+              </div>
             </div>
             <div className="testimonial-card">
-              <p>"From university selection to visa approval, they supported me every step of the way. Amazing service!"</p>
-              <h4>Priya Sharma</h4>
-              <span>Now studying in Harvard University</span>
+              <FaQuoteLeft className="quote-icon" />
+              <p>"From university selection to visa approval, they supported me every step of the way. Truly professional service!"</p>
+              <div className="testimonial-author">
+                <h4>Priya Sharma</h4>
+                <span>Monash University, Australia</span>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="latest-blogs">
-        <div className="container">
-          <div className="section-header">
-            <h2>Latest Updates</h2>
-            <p>Stay informed with our blog and news</p>
-          </div>
-          <div className="blogs-grid">
-            {blogs.map(blog => (
-              <Link to={`/blog/${blog.slug}`} key={blog.id} className="blog-card">
-                {blog.featured_image && (
-                  <img src={`${BACKEND_URL}/uploads/blogs/${blog.featured_image}`} alt={blog.title} />
-                )}
-                <div className="blog-content">
-                  <span className="blog-category">{blog.category}</span>
-                  <h3>{blog.title}</h3>
-                  <p>{blog.short_description}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div className="text-center">
-            <Link to="/blog" className="btn btn-outline">View All Posts</Link>
           </div>
         </div>
       </section>
 
       <section className="contact-cta">
         <div className="container">
-          <h2>Ready to Start Your Journey?</h2>
-          <p>Get in touch with our expert counselors today</p>
-          <div className="cta-buttons">
-            {whatsappNumber && (
-              <a href={`https://wa.me/${whatsappNumber}`} className="btn btn-success">
-                <FaWhatsapp /> WhatsApp Us
-              </a>
-            )}
-            <a href={`tel:${settings.contact_phone}`} className="btn btn-primary">
-              <FaPhone /> Call Now
-            </a>
-            <Link to="/contact" className="btn btn-secondary">Contact Form</Link>
+          <div className="cta-box">
+            <h2>Ready to Start Your Journey?</h2>
+            <p>Book your free counseling session with our expert advisors today.</p>
+            <div className="cta-buttons">
+              <Link to="/contact" className="btn btn-primary">Book Consultation</Link>
+              {whatsappNumber && (
+                <a href={`https://wa.me/${whatsappNumber}`} className="btn btn-success">
+                  <FaWhatsapp /> WhatsApp Us
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </section>

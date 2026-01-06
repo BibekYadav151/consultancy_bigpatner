@@ -117,23 +117,23 @@ const initDatabase = async () => {
     db.prepare(`
       INSERT INTO admins (email, password, name, role) 
       VALUES (?, ?, ?, ?)
-    `).run('admin@consultancy.com', hashedPassword, 'Admin User', 'admin');
+    `).run('admin@consultancy.com', hashedPassword, 'BIG Admin', 'admin');
     console.log('✅ Default admin created: admin@consultancy.com / admin123');
   }
 
   const settingsCount = db.prepare('SELECT COUNT(*) as count FROM settings').get();
   if (settingsCount.count === 0) {
     const defaultSettings = [
-      { key: 'site_name', value: 'Big Partner Consultancy' },
-      { key: 'contact_email', value: 'info@consultancy.com' },
-      { key: 'contact_phone', value: '+1 (555) 123-4567' },
-      { key: 'contact_address', value: '123 Business Avenue, Suite 100, New York, NY 10001' },
-      { key: 'whatsapp_number', value: '+15551234567' },
-      { key: 'facebook_url', value: '' },
-      { key: 'twitter_url', value: '' },
-      { key: 'instagram_url', value: '' },
-      { key: 'linkedin_url', value: '' },
-      { key: 'office_hours', value: 'Mon-Fri: 9:00 AM - 6:00 PM' }
+      { key: 'site_name', value: 'BIG Partnership' },
+      { key: 'contact_email', value: 'admissions@bigpartnership.com' },
+      { key: 'contact_phone', value: '+44 20 1234 5678' },
+      { key: 'contact_address', value: 'Global Education Hub, London, UK' },
+      { key: 'whatsapp_number', value: '+447000000000' },
+      { key: 'facebook_url', value: 'https://facebook.com/bigpartnership' },
+      { key: 'twitter_url', value: 'https://twitter.com/bigpartnership' },
+      { key: 'instagram_url', value: 'https://instagram.com/bigpartnership' },
+      { key: 'linkedin_url', value: 'https://linkedin.com/company/bigpartnership' },
+      { key: 'office_hours', value: 'Mon-Sat: 10:00 AM - 7:00 PM' }
     ];
     
     const insertSetting = db.prepare('INSERT INTO settings (key, value) VALUES (?, ?)');

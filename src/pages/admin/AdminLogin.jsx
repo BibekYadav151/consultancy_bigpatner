@@ -61,7 +61,7 @@ const AdminLogin = () => {
                 placeholder="••••••••"
               />
             </div>
-            <button type="submit" className="btn btn-primary btn-full" disabled={submitting}>
+            <button type="submit" className="btn btn-primary btn-login" disabled={submitting}>
               {submitting ? 'Signing in...' : 'Sign In'}
             </button>
           </form>

@@ -1,42 +1,122 @@
-.destinations-page, .country-detail-page {
-  padding-top: 70px;
+.destinations-page {
+  background: var(--bg-dark);
+}
+
+.destinations-page .page-hero {
+  position: relative;
+  height: 40vh;
+  min-height: 300px;
+  background-image: url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+}
+
+.destinations-page .page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.destinations-page .page-hero .container {
+  position: relative;
+  z-index: 2;
 }
 
 .destinations-content {
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 .search-bar {
+  margin-bottom: 3rem;
   max-width: 600px;
-  margin: 0 auto 3rem;
 }
 
 .search-bar input {
   width: 100%;
-  padding: 1rem;
-  border: 2px solid #e2e8f0;
-  border-radius: 10px;
-  font-size: 1rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: 8px;
+  background: var(--bg-charcoal);
+  border: 1px solid var(--secondary-color);
+  color: var(--white);
+  font-size: 1.1rem;
 }
 
 .search-bar input:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: var(--primary-color);
 }
 
-.loading, .error, .no-results {
-  text-align: center;
-  padding: 4rem 2rem;
-  font-size: 1.25rem;
-  color: #718096;
+.destinations-page .countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.destinations-page .country-card {
+  background: var(--bg-charcoal);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--white);
+  border: 1px solid var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+.destinations-page .country-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary-color);
+}
+
+.destinations-page .country-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.destinations-page .card-content {
+  padding: 2rem;
+}
+
+.destinations-page .card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.destinations-page .card-content p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.read-more {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Country Detail */
+.country-detail-page {
+  background: var(--bg-dark);
 }
 
 .country-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
   background-size: cover;
   background-position: center;
-  color: white;
-  padding: 6rem 2rem;
-  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--white);
 }
 
 .country-hero::before {
@@ -46,82 +126,70 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.country-hero .container {
-  position: relative;
-  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .country-hero h1 {
-  font-size: 3rem;
-  margin: 0;
+  position: relative;
+  z-index: 2;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .country-content {
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 
 .content-section {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .content-section h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #2d3748;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 0.5rem;
 }
 
 .content-section p {
-  font-size: 1.125rem;
+  color: var(--text-light);
   line-height: 1.8;
-  color: #4a5568;
+  font-size: 1.1rem;
 }
 
 .universities-list {
   display: grid;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .university-item {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: var(--bg-charcoal);
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
 }
 
 .university-item h3 {
-  margin: 0 0 0.5rem;
-  color: #2d3748;
-}
-
-.university-item p {
-  margin: 0.25rem 0;
-  color: #718096;
+  margin-bottom: 0.5rem;
 }
 
 .cta-section {
-  background: #f7fafc;
-  padding: 3rem;
-  border-radius: 10px;
   text-align: center;
-  margin-top: 3rem;
+  background: var(--bg-charcoal);
+  padding: 4rem;
+  border-radius: 12px;
 }
 
 .cta-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #2d3748;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
   .country-hero h1 {
-    font-size: 2rem;
-  }
-
-  .content-section h2 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 }

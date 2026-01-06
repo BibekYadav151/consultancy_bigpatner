@@ -1,97 +1,105 @@
 import React from 'react';
-import { FaCheckCircle, FaAward, FaGlobe, FaUsers } from 'react-icons/fa';
+import { FaCheckCircle, FaAward, FaGlobe, FaUsers, FaLightbulb, FaEye, FaHandshake, FaUserGraduate } from 'react-icons/fa';
 import './About.css';
 
 const About = () => {
   return (
     <div className="about-page">
       <section className="page-hero">
+        <div className="hero-overlay"></div>
         <div className="container">
-          <h1>About Us</h1>
-          <p>Your trusted partner for international education</p>
+          <div className="hero-content">
+            <h1>About BIG Partnership</h1>
+            <p>Empowering students through global education opportunities since inception.</p>
+          </div>
         </div>
       </section>
 
-      <section className="about-content">
+      <section className="about-intro">
         <div className="container">
-          <div className="about-intro">
-            <h2>Welcome to Big Partner Consultancy</h2>
-            <p>With years of experience in international education consulting, we have helped thousands of students achieve their dreams of studying abroad. Our team of expert counselors provides personalized guidance throughout your journey.</p>
-            <p>We partner with top universities worldwide and maintain strong relationships with immigration authorities, ensuring a smooth and successful application process for our students.</p>
-          </div>
-
-          <div className="why-choose">
-            <h2>Why Choose Us</h2>
-            <div className="features-grid">
-              <div className="feature-card">
-                <FaCheckCircle className="feature-icon" />
-                <h3>Expert Guidance</h3>
-                <p>Our experienced counselors have in-depth knowledge of international education systems and visa processes.</p>
-              </div>
-              <div className="feature-card">
-                <FaAward className="feature-icon" />
-                <h3>High Success Rate</h3>
-                <p>Over 95% of our students successfully get admitted to their chosen universities and receive their visas.</p>
-              </div>
-              <div className="feature-card">
-                <FaGlobe className="feature-icon" />
-                <h3>Global Network</h3>
-                <p>We partner with 500+ universities across 25+ countries worldwide.</p>
-              </div>
-              <div className="feature-card">
-                <FaUsers className="feature-icon" />
-                <h3>Personalized Support</h3>
-                <p>From university selection to post-arrival support, we're with you every step of the way.</p>
-              </div>
+          <div className="intro-grid">
+            <div className="intro-content">
+              <h2>Redefining International Education</h2>
+              <p>BIG Partnership (Britts Imperial Global Partnership) is a trusted international education consultancy dedicated to guiding students toward globally recognized universities. We understand that choosing the right education path is one of the most significant decisions in a student's life.</p>
+              <p>Our comprehensive approach ensures that every student receives personalized attention, from identifying the right destination to securing admission and navigating the visa process. We are committed to transparency, excellence, and the success of our students.</p>
+            </div>
+            <div className="intro-image">
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Team collaborating" />
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="stats-section">
-            <h2>Our Achievements</h2>
-            <div className="stats-grid">
-              <div className="stat-box">
-                <h3>5000+</h3>
-                <p>Students Placed</p>
-              </div>
-              <div className="stat-box">
-                <h3>500+</h3>
-                <p>Partner Universities</p>
-              </div>
-              <div className="stat-box">
-                <h3>25+</h3>
-                <p>Countries</p>
-              </div>
-              <div className="stat-box">
-                <h3>95%</h3>
-                <p>Success Rate</p>
-              </div>
+      <section className="mission-vision">
+        <div className="container">
+          <div className="mv-grid">
+            <div className="mv-card">
+              <FaLightbulb className="mv-icon" />
+              <h3>Our Mission</h3>
+              <p>To empower students with transparent guidance and global education opportunities, enabling them to build a successful future on the international stage.</p>
+            </div>
+            <div className="mv-card">
+              <FaEye className="mv-icon" />
+              <h3>Our Vision</h3>
+              <p>To become a leading international education partner worldwide, recognized for our integrity, student-centric approach, and excellence in service.</p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="team-section">
-            <h2>Our Team</h2>
-            <p className="text-center">Meet our dedicated team of education consultants</p>
-            <div className="team-grid">
-              <div className="team-member">
-                <div className="member-avatar">JD</div>
-                <h3>John Doe</h3>
-                <p>Senior Education Consultant</p>
-              </div>
-              <div className="team-member">
-                <div className="member-avatar">JS</div>
-                <h3>Jane Smith</h3>
-                <p>Visa Specialist</p>
-              </div>
-              <div className="team-member">
-                <div className="member-avatar">MC</div>
-                <h3>Mike Chen</h3>
-                <p>Career Counselor</p>
-              </div>
-              <div className="team-member">
-                <div className="member-avatar">SP</div>
-                <h3>Sarah Patel</h3>
-                <p>Admissions Expert</p>
-              </div>
+      <section className="core-values">
+        <div className="container">
+          <div className="section-title">
+            <h2>Our Core Values</h2>
+            <p>The principles that drive everything we do at BIG Partnership.</p>
+          </div>
+          <div className="values-grid">
+            <div className="value-card">
+              <div className="value-number">01</div>
+              <h3>Integrity</h3>
+              <p>We maintain the highest standards of honesty and transparency in all our interactions with students and partners.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-number">02</div>
+              <h3>Excellence</h3>
+              <p>We strive for excellence in every service we provide, ensuring the best outcomes for our students.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-number">03</div>
+              <h3>Transparency</h3>
+              <p>We provide clear, accurate information at every step of the journey, with no hidden costs or false promises.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-number">04</div>
+              <h3>Student-Centric</h3>
+              <p>Our students' needs and aspirations are at the heart of everything we do. Their success is our success.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="achievements">
+        <div className="container">
+          <div className="stats-grid">
+            <div className="stat-box">
+              <FaAward className="stat-icon" />
+              <h3>10+</h3>
+              <p>Years of Excellence</p>
+            </div>
+            <div className="stat-box">
+              <FaUserGraduate className="stat-icon" />
+              <h3>5000+</h3>
+              <p>Students Placed</p>
+            </div>
+            <div className="stat-box">
+              <FaGlobe className="stat-icon" />
+              <h3>300+</h3>
+              <p>University Partners</p>
+            </div>
+            <div className="stat-box">
+              <FaHandshake className="stat-icon" />
+              <h3>98%</h3>
+              <p>Visa Success Rate</p>
             </div>
           </div>
         </div>

@@ -22,8 +22,8 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <Link to="/" className="logo">
-          <h2>Big Partner</h2>
-          <span>Education Consultancy</span>
+          <h2>BIG <span>Partnership</span></h2>
+          <span className="tagline">Global Education</span>
         </Link>
         
         <button 
