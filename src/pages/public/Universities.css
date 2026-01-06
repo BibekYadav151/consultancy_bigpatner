@@ -1,5 +1,5 @@
 .universities-page {
-  background: var(--bg-dark);
+  background: var(--bg-main);
 }
 
 .universities-page .page-hero {
@@ -11,7 +11,7 @@
   background-position: center;
   display: flex;
   align-items: center;
-  color: var(--white);
+  color: var(--text-white);
 }
 
 .universities-page .page-hero::before {
@@ -21,7 +21,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(31, 41, 55, 0.75);
 }
 
 .universities-page .page-hero .container {
@@ -44,9 +44,9 @@
 .filters-row select {
   padding: 1.2rem;
   border-radius: 8px;
-  background: var(--bg-charcoal);
-  border: 1px solid var(--secondary-color);
-  color: var(--white);
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
   font-size: 1rem;
 }
 
@@ -66,22 +66,24 @@
 }
 
 .universities-page .university-card {
-  background: var(--bg-charcoal);
+  background: var(--bg-white);
   border-radius: 12px;
   padding: 2.5rem 2rem;
   text-align: center;
   text-decoration: none;
-  color: var(--white);
-  border: 1px solid var(--secondary-color);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: var(--shadow);
 }
 
 .universities-page .university-card:hover {
   border-color: var(--primary-color);
   transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .universities-page .university-card img {
@@ -89,7 +91,6 @@
   max-width: 100%;
   object-fit: contain;
   margin-bottom: 2rem;
-  filter: grayscale(1) invert(1) brightness(2);
 }
 
 .universities-page .card-content h3 {
@@ -107,7 +108,7 @@
 .meta {
   display: inline-block;
   background: var(--primary-color);
-  color: var(--bg-dark);
+  color: var(--text-primary);
   padding: 0.2rem 0.8rem;
   border-radius: 4px;
   font-size: 0.75rem;
@@ -118,29 +119,29 @@
 
 /* Detail Page */
 .university-detail-page {
-  background: var(--bg-dark);
+  background: var(--bg-main);
 }
 
 .detail-card {
-  background: var(--bg-charcoal);
+  background: var(--bg-white);
   padding: 4rem;
   border-radius: 15px;
   margin-top: -5rem;
   position: relative;
   z-index: 5;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
 }
 
 .detail-logo {
   height: 120px;
   margin-bottom: 3rem;
-  filter: grayscale(1) invert(1) brightness(2);
 }
 
 .detail-section {
   margin-bottom: 2.5rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .detail-section:last-of-type {
@@ -154,7 +155,7 @@
 }
 
 .detail-section p {
-  color: var(--text-light);
+  color: var(--text-secondary);
   line-height: 1.8;
   font-size: 1.1rem;
 }

@@ -1,5 +1,6 @@
 .home {
   overflow-x: hidden;
+  background: var(--bg-main);
 }
 
 /* Hero Section */
@@ -12,7 +13,7 @@
   background-image: url('https://images.unsplash.com/photo-1541339907198-e08756ebafe3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
   background-size: cover;
   background-position: center;
-  color: var(--white);
+  color: var(--text-white);
   padding: 0;
 }
 
@@ -22,7 +23,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0.4) 100%);
+  background: linear-gradient(to right, rgba(31, 41, 55, 0.9) 30%, rgba(31, 41, 55, 0.4) 100%);
 }
 
 .hero-content {
@@ -46,7 +47,7 @@
 .hero-subtitle {
   font-size: 1.25rem;
   margin-bottom: 2.5rem;
-  color: var(--text-light);
+  color: rgba(255, 255, 255, 0.9);
   max-width: 600px;
 }
 
@@ -59,7 +60,7 @@
 /* Featured Destinations */
 .featured-destinations {
   padding: 8rem 0;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-white);
 }
 
 .countries-grid {
@@ -132,7 +133,7 @@
 /* Why BIG Section */
 .why-big {
   padding: 8rem 0;
-  background-color: var(--bg-charcoal);
+  background-color: var(--bg-light);
 }
 
 .why-big-grid {
@@ -170,18 +171,18 @@
 .benefit-item h4 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  color: var(--white);
+  color: var(--text-primary);
 }
 
 .benefit-item p {
-  color: var(--text-light);
+  color: var(--text-secondary);
   font-size: 0.95rem;
 }
 
 /* Popular Universities */
 .popular-universities {
   padding: 8rem 0;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-white);
 }
 
 .universities-grid {
@@ -191,17 +192,19 @@
 }
 
 .uni-card {
-  background: var(--bg-charcoal);
+  background: var(--bg-white);
   padding: 3rem 2rem;
   border-radius: 12px;
   text-align: center;
   transition: all 0.3s ease;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
 }
 
 .uni-card:hover {
   border-color: var(--primary-color);
   transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .uni-logo {
@@ -221,11 +224,11 @@
 .uni-card h4 {
   font-size: 1.15rem;
   margin-bottom: 0.5rem;
-  color: var(--white);
+  color: var(--text-primary);
 }
 
 .uni-card p {
-  color: var(--text-light);
+  color: var(--text-secondary);
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
 }
@@ -242,7 +245,7 @@
 /* Testimonials */
 .testimonials {
   padding: 8rem 0;
-  background-color: var(--bg-charcoal);
+  background-color: var(--bg-white);
 }
 
 .testimonials-grid {
@@ -252,11 +255,12 @@
 }
 
 .testimonial-card {
-  background: var(--bg-dark);
+  background: var(--bg-white);
   padding: 3rem;
   border-radius: 12px;
   position: relative;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
 }
 
 .quote-icon {
@@ -269,13 +273,13 @@
 .testimonial-card p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--text-light);
+  color: var(--text-secondary);
   font-style: italic;
   margin-bottom: 2rem;
 }
 
 .testimonial-author h4 {
-  color: var(--white);
+  color: var(--text-primary);
   margin: 0;
 }
 
@@ -287,7 +291,7 @@
 /* Contact CTA */
 .contact-cta {
   padding: 8rem 0;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-white);
 }
 
 .cta-box {
@@ -295,7 +299,7 @@
   padding: 5rem;
   border-radius: 20px;
   text-align: center;
-  color: var(--bg-dark);
+  color: var(--text-primary);
 }
 
 .cta-box h2 {
@@ -316,7 +320,7 @@
 }
 
 .cta-box .btn-primary {
-  background: var(--bg-dark);
+  background: var(--text-primary);
   color: var(--primary-color);
 }
 

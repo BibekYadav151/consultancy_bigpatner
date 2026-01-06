@@ -11,7 +11,7 @@
   background-position: center;
   display: flex;
   align-items: center;
-  color: var(--white);
+  color: var(--text-white);
 }
 
 .hero-overlay {
@@ -20,7 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(31, 41, 55, 0.7);
 }
 
 .page-hero .hero-content {
@@ -42,7 +42,7 @@
 /* Intro Section */
 .about-intro {
   padding: 8rem 0;
-  background: var(--bg-dark);
+  background: var(--bg-main);
 }
 
 .intro-grid {
@@ -55,12 +55,12 @@
 .intro-content h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: var(--white);
+  color: var(--text-primary);
 }
 
 .intro-content p {
   margin-bottom: 1.5rem;
-  color: var(--text-light);
+  color: var(--text-secondary);
   font-size: 1.1rem;
   line-height: 1.8;
 }
@@ -68,13 +68,13 @@
 .intro-image img {
   width: 100%;
   border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  box-shadow: var(--shadow-lg);
 }
 
 /* Mission & Vision */
 .mission-vision {
   padding: 6rem 0;
-  background: var(--bg-charcoal);
+  background: var(--bg-white);
 }
 
 .mv-grid {
@@ -84,16 +84,18 @@
 }
 
 .mv-card {
-  background: var(--bg-dark);
+  background: var(--bg-white);
   padding: 4rem 3rem;
   border-radius: 12px;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
+  box-shadow: var(--shadow);
 }
 
 .mv-card:hover {
   border-color: var(--primary-color);
   transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .mv-icon {
@@ -105,11 +107,11 @@
 .mv-card h3 {
   font-size: 1.75rem;
   margin-bottom: 1.5rem;
-  color: var(--white);
+  color: var(--text-primary);
 }
 
 .mv-card p {
-  color: var(--text-light);
+  color: var(--text-secondary);
   line-height: 1.8;
   font-size: 1.05rem;
 }
@@ -117,7 +119,7 @@
 /* Core Values */
 .core-values {
   padding: 8rem 0;
-  background: var(--bg-dark);
+  background: var(--bg-light);
 }
 
 .values-grid {
@@ -128,10 +130,12 @@
 }
 
 .value-card {
-  background: var(--bg-charcoal);
+  background: var(--bg-white);
   padding: 3rem 2rem;
   border-radius: 12px;
   position: relative;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
 }
 
 .value-number {
@@ -150,7 +154,7 @@
 }
 
 .value-card p {
-  color: var(--text-light);
+  color: var(--text-secondary);
   line-height: 1.7;
 }
 
@@ -168,7 +172,7 @@
 }
 
 .stat-box {
-  color: var(--bg-dark);
+  color: var(--text-primary);
 }
 
 .stat-icon {
