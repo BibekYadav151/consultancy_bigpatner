@@ -146,11 +146,31 @@ export const CountryDetail = () => {
               <h2>Universities in {country.name}</h2>
               <div className="universities-list">
                 {country.universities.map(university => (
-                  <div key={university.id} className="university-item">
-                    <h3>{university.name}</h3>
-                    <p>{university.location}</p>
-                    {university.tuition_fees && <p><strong>Tuition:</strong> {university.tuition_fees}</p>}
-                  </div>
+                  <Link 
+                    to={`/universities/${university.slug}`} 
+                    key={university.id} 
+                    className="university-item"
+                    style={{ textDecoration: 'none', color: 'inherit' }}
+                  >
+                    {university.logo && (
+                      <div className="university-logo">
+                        <img 
+                          src={`${BACKEND_URL}/uploads/universities/${university.logo}`} 
+                          alt={university.name}
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                          }}
+                        />
+                      </div>
+                    )}
+                    <div className="university-info">
+                      <h3>{university.name}</h3>
+                      {university.location && (
+                        <p className="university-location">{university.location}</p>
+                      )}
+                    </div>
+                    <span className="university-link">View Details →</span>
+                  </Link>
                 ))}
               </div>
             </div>

@@ -18,7 +18,7 @@ import {
   settingsAPI,
 } from "../../services/api";
 import educationImage from "./images/education.jpg";
-import heroImage from "./images/education.jpg"; // You can replace this with a dedicated hero image
+import heroImage from "./images/hero.jpg";
 import "./Home.css";
 
 const Home = () => {
@@ -32,8 +32,8 @@ const Home = () => {
       .getAll({ status: "active" })
       .then((response) => {
         const data = response.data || response;
-        setCountries(Array.isArray(data) ? data.slice(0, 5) : []);
-        console.log('Countries loaded:', data);
+        setCountries(Array.isArray(data) ? data.slice(0, 4) : []);
+        console.log("Countries loaded:", data);
       })
       .catch((error) => console.error("Failed to fetch countries:", error));
 
@@ -41,8 +41,8 @@ const Home = () => {
       .getAll({ status: "active" })
       .then((response) => {
         const data = response.data || response;
-        setUniversities(Array.isArray(data) ? data.slice(0, 8) : []);
-        console.log('Universities loaded:', data);
+        setUniversities(Array.isArray(data) ? data.slice(0, 4) : []);
+        console.log("Universities loaded:", data);
       })
       .catch((error) => console.error("Failed to fetch universities:", error));
 
@@ -51,7 +51,7 @@ const Home = () => {
       .then((response) => {
         const data = response.data || response;
         setBlogs(Array.isArray(data) ? data.slice(0, 3) : []);
-        console.log('Blogs loaded:', data);
+        console.log("Blogs loaded:", data);
       })
       .catch((error) => console.error("Failed to fetch blogs:", error));
 
@@ -111,8 +111,11 @@ const Home = () => {
                       src={`${BACKEND_URL}/uploads/countries/${country.flag_image}`}
                       alt={country.name}
                       onError={(e) => {
-                        console.error('Failed to load image:', `${BACKEND_URL}/uploads/countries/${country.flag_image}`);
-                        e.target.style.display = 'none';
+                        console.error(
+                          "Failed to load image:",
+                          `${BACKEND_URL}/uploads/countries/${country.flag_image}`
+                        );
+                        e.target.style.display = "none";
                       }}
                     />
                   )}
@@ -123,6 +126,11 @@ const Home = () => {
                 </div>
               </Link>
             ))}
+          </div>
+          <div className="section-footer">
+            <Link to="/destinations" className="btn btn-outline">
+              See All
+            </Link>
           </div>
         </div>
       </section>
@@ -194,15 +202,23 @@ const Home = () => {
           </div>
           <div className="universities-grid">
             {universities.map((university) => (
-              <div key={university.id} className="uni-card">
+              <Link
+                to={`/universities/${university.slug}`}
+                key={university.id}
+                className="uni-card"
+                style={{ textDecoration: "none" }}
+              >
                 <div className="uni-logo">
                   {university.logo ? (
                     <img
                       src={`${BACKEND_URL}/uploads/universities/${university.logo}`}
                       alt={university.name}
                       onError={(e) => {
-                        console.error('Failed to load image:', `${BACKEND_URL}/uploads/universities/${university.logo}`);
-                        e.target.style.display = 'none';
+                        console.error(
+                          "Failed to load image:",
+                          `${BACKEND_URL}/uploads/universities/${university.logo}`
+                        );
+                        e.target.style.display = "none";
                       }}
                     />
                   ) : (
@@ -211,11 +227,14 @@ const Home = () => {
                 </div>
                 <h4>{university.name}</h4>
                 <p>{university.location}</p>
-                <Link to="/universities" className="uni-link">
-                  See More
-                </Link>
-              </div>
+                <span className="uni-link">See More</span>
+              </Link>
             ))}
+          </div>
+          <div className="section-footer">
+            <Link to="/universities" className="btn btn-outline">
+              See All
+            </Link>
           </div>
         </div>
       </section>

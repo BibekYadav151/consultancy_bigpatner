@@ -143,12 +143,13 @@ const Contact = () => {
                   />
                 </div>
                 <div className="form-group">
-                  <label>Phone</label>
+                  <label>Phone *</label>
                   <input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
+                    required
                   />
                 </div>
                 <div className="form-group">

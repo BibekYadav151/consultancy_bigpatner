@@ -65,6 +65,11 @@
   background-color: var(--bg-white);
 }
 
+.section-footer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
 .countries-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -236,7 +241,8 @@
 .uni-logo img {
   max-width: 100%;
   max-height: 100%;
-  filter: grayscale(1) invert(1) brightness(2);
+  object-fit: contain;
+  filter: none;
 }
 
 .uni-card h4 {
@@ -258,6 +264,12 @@
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.uni-card:hover .uni-link {
+  color: var(--primary-dark);
 }
 
 /* Testimonials */
@@ -334,7 +346,22 @@
 }
 
 .cta-box .cta-buttons {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cta-box .cta-buttons .btn {
+  min-width: 200px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .cta-box .btn-primary {
@@ -343,7 +370,8 @@
 }
 
 .cta-box .btn-primary:hover {
-  background: #111;
+  background: white;
+  color: black;
 }
 
 @media (max-width: 1024px) {
